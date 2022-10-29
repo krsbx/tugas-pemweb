@@ -1,0 +1,141 @@
+:root {
+  --blue-100: #bee3f8;
+  --blue-200: #90cdf4;
+  --blue-300: #63b3ed;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e0;
+  --gray-500: #718096;
+  --gray-600: #4a5568;
+  --gray-700: #2d3748;
+  --gray-900: #171923;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--gray-700);
+}
+
+.container::after {
+  content: 'Created By Muhammad Firdaus Sati (119140150) for Pomu Rainpuff';
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: var(--gray-700);
+  width: 300px;
+  min-height: 225px;
+  box-shadow: none;
+  transition: box-shadow 0.2s ease-in-out;
+  border: 2px solid var(--gray-600);
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px var(--gray-300);
+}
+
+.card:hover::after {
+  background-color: red;
+}
+
+.card > img {
+  width: 200px;
+  height: auto;
+}
+
+.card > a {
+  text-decoration: none;
+  position: absolute;
+  bottom: 5px;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.card > a:hover {
+  color: var(--blue-300);
+}
+
+.breadcrumb {
+  top: 25%;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  overflow: visible;
+}
+
+.breadcrumb > * {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.breadcrumb > p,
+.breadcrumb > a {
+  text-decoration: none;
+}
+
+.breadcrumb > p:hover,
+.breadcrumb > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.breadcrumb > p::after,
+.breadcrumb > a::after {
+  content: '/';
+  padding-left: 2px;
+  padding-right: 2px;
+  text-decoration: none;
+}
+
+.breadcrumb > p:nth-last-child(2) {
+  cursor: pointer;
+}
+
+.breadcrumb > p:nth-last-child(2)::after {
+  content: '';
+}
+
+.breadcrumb > p:last-child {
+  cursor: pointer;
+}
+
+.breadcrumb > p:last-child::after {
+  content: '';
+}
+
+#current-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: max-content;
+  text-transform: uppercase;
+}
+
+#current-link::before {
+  content: 'URL ⇒ ';
+}

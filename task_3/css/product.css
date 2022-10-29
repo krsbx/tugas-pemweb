@@ -1,0 +1,102 @@
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.products-holder {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.product-details {
+  padding-left: 10px;
+  color: white;
+}
+
+.product-details > ul > li {
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.product-details > ul > li::marker {
+  display: 'none';
+}
+
+.product-details > ul > li::before {
+  font-size: 18px;
+  content: '→ ';
+}
+
+.products-holder > table {
+  color: white;
+  padding-left: 15px;
+}
+
+.product-details > table > tr > th,
+td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.reviews {
+  height: 50vh;
+  width: 50vw;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.circles {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--gray-600);
+  border-radius: 50%;
+  padding-right: 20px;
+}
+
+.trailing-dash {
+  width: 45%;
+  height: 1px;
+  border: 2px solid var(--gray-600);
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+
+.pagination > p {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.pagination > p:hover {
+  color: var(--gray-500);
+}
